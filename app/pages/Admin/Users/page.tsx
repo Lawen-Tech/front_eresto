@@ -1,9 +1,9 @@
 import React from 'react'
+import { UsersAdminClient } from './Users'
 
-const Users = () => {
-    return (
-        <div>Users</div>
-    );
+
+const UsersAdminPage = () => {
+    return <UsersAdminClient />
 };
 
-export default Users;
+export default UsersAdminPage;
