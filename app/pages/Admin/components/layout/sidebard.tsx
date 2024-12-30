@@ -1,22 +1,27 @@
 // import Link from 'next/link'
 
 import { Link } from 'react-router';
-import { ClipboardList, Table2, History, Grid2X2, Package, Users } from 'lucide-react'
+import { ClipboardList, UtensilsCrossed, History, Grid2X2, Package, Users } from 'lucide-react'
+import { SiTablecheck } from "react-icons/si";
+
 
 const navItems = [
-    { href: '/pedidos', label: 'Pedidos', icon: ClipboardList },
-    { href: '/mesas', label: 'Mesas', icon: Table2 },
-    { href: '/historial', label: 'Histórial de pagos', icon: History },
-    { href: '/categorias', label: 'Categorías', icon: Grid2X2 },
-    { href: '/productos', label: 'Productos', icon: Package },
-    { href: '/usuarios', label: 'Usuarios', icon: Users },
+    { href: 'orders', label: 'Pedidos', icon: ClipboardList },
+    { href: 'tables', label: 'Mesas', icon: SiTablecheck },
+    { href: 'payment-history', label: 'Histórial de pagos', icon: History },
+    { href: 'categories', label: 'Categorías', icon: Grid2X2 },
+    { href: 'products', label: 'Productos', icon: Package },
+    { href: 'users', label: 'Usuarios', icon: Users },
 ]
 
 export function Sidebar() {
     return (
         <aside className="w-64 bg-white border-r h-screen">
             <div className="p-4 border-b">
-                <h1 className="text-xl font-semibold text-gray-800">iCard Admin</h1>
+                <Link to='/admin'>
+                    <h1 className="text-xl font-semibold text-gray-800">iCard Admin</h1>
+                </Link>
+                
             </div>
             <nav className="p-4">
                 <ul className="space-y-2">

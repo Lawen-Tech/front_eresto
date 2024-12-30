@@ -3,6 +3,7 @@ import autoprefixer from "autoprefixer";
 import tailwindcss from "tailwindcss";
 import { defineConfig } from "vite";
 import tsconfigPaths from "vite-tsconfig-paths";
+import react from '@vitejs/plugin-react';
 
 export default defineConfig(({ isSsrBuild, command }) => ({
   build: {
@@ -20,5 +21,8 @@ export default defineConfig(({ isSsrBuild, command }) => ({
   ssr: {
     noExternal: command === "build" ? true : undefined,
   },
-  plugins: [reactRouter(), tsconfigPaths()],
+  plugins: [ react(), reactRouter(), tsconfigPaths()],
+  server: {
+    port: 3000,
+  },
 }));

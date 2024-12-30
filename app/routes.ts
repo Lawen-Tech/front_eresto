@@ -1,15 +1,22 @@
-import { type RouteConfig, route,  index } from "@react-router/dev/routes";
+import { type RouteConfig, route, index } from "@react-router/dev/routes";
 
 export default [
-    index("routes/home.tsx"),
-    route("admin", "./pages/Admin/Admin.tsx"),
-    route("categories", "./pages/Admin/Categories/Categories.tsx"),
-    route("orders", "./pages/Admin/Orders/Orders.tsx"),
-    route("payment-history", "./pages/Admin/PaymentHistory/PaymentHistory.tsx"),
-    route("products", "./pages/Admin/Products/Products.tsx"),
-    route("tables", "./pages/Admin/Tables/Tables.tsx"),
-    route("users", "./pages/Admin/Users/Users.tsx"),
+    index('./pages/Home/Home.tsx'),
 
+    route('admin', './pages/Admin/AdminLayout.tsx', [
+        index('./pages/Admin/Dashboard/page.tsx'),
+        route("tables", "./pages/Admin/Tables/page.tsx"),
+        route("orders", "./pages/Admin/Orders/page.tsx"),
+        route('categories', './pages/Admin/Categories/page.tsx'),
+        route("payment-history", "./pages/Admin/PaymentHistory/page.tsx"),
+        route("products", "./pages/Admin/Products/page.tsx"),
+        route("users", "./pages/Admin/Users/page.tsx"),
+
+
+
+
+
+    ]),
+//     // route("admin", "./pages/Admin/Admin.tsx"),
+//     // route("users", "./pages/Admin/Users/page.tsx"),
 ] satisfies RouteConfig;
-
-
