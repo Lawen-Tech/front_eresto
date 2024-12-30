@@ -21,7 +21,7 @@ interface TableUsersProps {
 }
 
 export function TableUsers({ users, updateUser, onDeleteUser }: TableUsersProps) {
-    console.log(users)
+    console.log("pase por acá")
     return (
         <Table className={styles.tableUsersAdmin}>
             <TableHeader>

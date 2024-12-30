@@ -12,7 +12,7 @@ export function UsersAdminClient() {
     useEffect(() => {
         getUsers()
     }, [getUsers])
-
+    console.log(users)
     return (
         <>
             <HeaderPage title="Usuarios" btnTitle="Nuevo usuario" btnClick={() => { }} />

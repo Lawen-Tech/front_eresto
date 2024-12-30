@@ -23,6 +23,7 @@ export function useUser() {
             { id: "2", username: "jane_smith", email: "jane@example.com", first_name: "Jane", last_name: "Smith", is_active: true, is_staff: true },
             { id: "3", username: "bob_johnson", email: "bob@example.com", first_name: "Bob", last_name: "Johnson", is_active: false, is_staff: false },
         ]
+        console.log(mockUsers.length)
         setUsers(mockUsers)
         setLoading(false)
     }, [])

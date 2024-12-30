@@ -1,15 +1,3 @@
-// import React from 'react'
-
-// const CategoriesAdminClient = () => {
-//   return (
-//     <div>CATEGORIAS</div>
-//   );
-// }
-
-// export default CategoriesAdminClient;
-
-
-
 'use client'
 
 import React, { useState, useEffect, useCallback } from "react"
